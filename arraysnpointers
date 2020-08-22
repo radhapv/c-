@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    int *ptr;
+    cout<<"Enter the number of elements to be printed:" <<endl ;
+    cin>>n;
+     int arr[n];
+      for(int i=0;i<n;i++)
+      {
+         cout<<"Enter" <<i+1 <<"th element:" <<endl;
+         cin>>arr[i];
+      }
+      ptr=arr;
+      cout<<"The array is as follows:" <<endl ;
+       for(int i=0;i<n;i++)
+      {
+         cout<<*ptr <<endl;
+         ptr++;
+      }
+    
+}
