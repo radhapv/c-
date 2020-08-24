@@ -1,0 +1,37 @@
+
+#include <iostream>
+using namespace std;
+
+int prime(int num)
+ {
+     for(int i=2;i<=num/2;i++) 
+      {
+         if(num%i==0)
+          {
+          
+            return 0;
+            break;
+          }
+      }
+     return 1;
+       
+ }
+
+int main() {
+     int n,flag=0;
+     cout<<"Enter the number:";
+     cin>>n;
+     for(int i=2;i<=n/2;i++)
+       {
+          if(prime(i)==1)
+            {
+                if(prime(n-i)==1)
+                  {
+                      cout<<n <<"=" <<i <<"+" <<n-i << endl;
+                      flag=1; 
+                  }
+            }
+        }
+         if(flag==0)
+             cout<<"oops the number cannot be expressed as a sum of 2 prime numbers";
+}
